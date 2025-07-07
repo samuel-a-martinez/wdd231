@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+/* HEADER */
+header {
+    display: grid;
+    grid-template-columns: 24px auto 44px;
+    padding: 5px 0 5px 10px;
+    border-bottom: solid 2px #924f4f;
+    
+}
