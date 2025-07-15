@@ -9,16 +9,60 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/home-page.css">
     <link rel="stylesheet" href="styles/home-page-large.css">
-    <script src="" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/house-gear-fill.svg" alt="logo">
+        <img src="images/house-gear-fill.svg" alt="logo" width="16" height="16">
         <span>Samuel Martinez</span>
-        <button id="ham-btn" class="hamburguer"></button>
+        <button id="ham-btn" class="hamburguer" aria-label="navigation-button"></button>
     </header>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class = "current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <h1>Home</h1>
+
+        <section class="about-me-section">
+            <h2>About Me</h2>
+            <p>I like to play videogames, listen to music and going to the cinema to watch movies, also watch series of TV and animated series and movies.
+                I live in Veracruz, Mexico.
+            </p>
+        </section>
+
+        <section class="student-photo-section">
+            <h2>Student Photo</h2>
+            <div class="photo-placeholder">
+                <img src="images/profile.jpg" alt="Student Photo Placeholder">
+            </div>
+        </section>
+
+        <section class="web-certificate-courses-section">
+            <h2>Web Certificate Courses</h2>
+            <div class="course-filter-buttons">
+                <button id="filter-all" class="active" aria-label="all">All</button>
+                <button id="filter-cse" aria-label="cse">CSE</button>
+                <button id="filter-wdd" aria-label="wdd">WDD</button>
+            </div>
+            <div id="course-cards-container" class="course-cards-grid">
+                </div>
+            <p class="total-credits">The total credits for course listed above is <span id="total-credits-value">0</span></p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="social">
+            <a href="https://github.com/samuel-a-martinez" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="images/icons8-facebook.svg" alt="facebook" width="16" height="16"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="images/icons8-instagram.svg" alt="instagram" width="16" height="16"></a>
+            <a href="https://x.com" target="_blank"><img src="images/icons8-x.svg" alt="twitter" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/samuel-alejandro-martínez-ramírez-732954364" target="_blank"><img src="images/linkedin.svg" alt="linked in" width="16" height="16"></a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> Samuel Martinez &bull; Veracruz, Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>

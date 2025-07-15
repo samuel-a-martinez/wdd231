@@ -1,0 +1,33 @@
+@media only screen and (min-width: 28rem){
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto;
+    } 
+    header {
+        grid-template-columns: 24px auto;
+    }
+
+
+    .hamburguer {
+        display: none;
+    }
+    .navigation {
+        display: block;
+        border-bottom: solid 1px white;
+    }
+    .navigation ul {
+        display: flex;
+    }
+    .navigation a {
+        border: none;
+    }
+    .main-content {
+        max-width: 900px;
+        gap: 30px;
+        grid-template-columns: 2fr 1fr; /* About Me (2 parts), Photo (1 part) */
+    }
+
+    .web-certificate-courses-section {
+        grid-column: 1 / -1; 
+    }
+}
