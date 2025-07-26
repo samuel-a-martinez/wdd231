@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         listItem.classList.add('member-list-item');
 
         listItem.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name} Logo">
             <div class="details">
                 <h3>${member.name}</h3>
                 <p>${member.address}</p>
