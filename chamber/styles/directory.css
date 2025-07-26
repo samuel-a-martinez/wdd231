@@ -1,0 +1,383 @@
+/* General Body and Container Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; 
+}
+
+.header-content, .footer-content, main {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #004d40; /* Dark green for header */
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    height: 50px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* For desktop navigation */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #00796b; /* Lighter green on hover/active */
+    border-radius: 5px;
+}
+
+#menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem 1rem;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #004d40;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem; /* Adjust padding for icons */
+    width: 60px; /* Fixed width for icon buttons */
+    height: 60px; /* Fixed height for icon buttons */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* Larger font size for icons */
+    line-height: 1;
+}
+
+.view-toggle button:hover {
+    background-color: #004d40;
+}
+
+.view-toggle button.active {
+    background-color: #004d40;
+    cursor: default;
+}
+
+#member-display {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
+
+.view-toggle button .icon-grid {
+    line-height: 0.8; /* Adjust line height for grid squares */
+}
+.view-toggle button .icon-list {
+    font-size: 2.5rem; /* Adjust size if needed */
+}
+/* Grid View Styles */
+#member-display.grid-view {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.member-card {
+    background-color: #e0f2f1; /* Light cyan for cards */
+    border: 1px solid #b2dfdb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px; /* Ensures consistent card height */
+}
+
+.member-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.member-card h3 {
+    color: #004d40;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.member-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.member-card a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+/* List View Styles */
+#member-display.list-view {
+    display: block;
+}.member-list-item {
+    background-color: #e0f2f1; /* Light background for items */
+    border: 1px solid #b2dfdb;
+    border-radius: 8px; /* Maintain rounded corners */
+    padding: 1rem 1.5rem;
+    margin-bottom: 10px; /* Space between list items */
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Vertically center content */
+    gap: 20px; /* Space between image and text details */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Subtle shadow */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+/* Zebra Striping */
+#member-display.list-view .member-list-item:nth-child(odd) {
+    background-color: #f8fcfc; /* Lighter background for odd rows */
+}
+#member-display.list-view .member-list-item:hover {
+    background-color: #d1e2e1; /* Slightly darker on hover */
+}
+.member-list-item img {
+    max-width: 60px; /* Smaller image in list view */
+    height: auto;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevent image from shrinking if text is long */
+}
+.member-list-item .details {
+    flex-grow: 1; /* Allows details to take available space */
+    display: grid; /* Use grid for internal column alignment */
+    grid-template-columns: 1.5fr 1fr 1fr 2fr; /* Adjust column widths as needed */
+    gap: 5px 15px; /* Row and column gap */
+    align-items: center; /* Align items vertically in their grid cells */
+    font-size: 0.9rem;
+}
+.member-list-item h3 {
+    color: #004d40;
+    margin: 0;
+    font-size: 1.2rem;
+    grid-column: 1 / span 4; /* Span full width for company name */
+}
+.member-list-item p {
+    margin: 0.2rem 0;
+}
+.member-list-item img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 4px;
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+.member-list-item .details p:nth-of-type(1) { /* Address */
+    grid-column: 1;
+}
+.member-list-item .details p:nth-of-type(2) { /* Phone */
+    grid-column: 2;
+}
+.member-list-item .details p:nth-of-type(3) { /* Website */
+    grid-column: 3 / span 2; /* Website takes two columns */
+    text-align: right;
+}
+.member-list-item .details p:nth-of-type(4) { /* Membership */
+    grid-column: 1 / span 4; /* Membership below other details */
+    font-style: italic;
+    color: #555;
+    margin-top: 5px;
+}
+
+.member-list-item a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.member-list-item a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+    gap: 20px;
+}
+
+.footer-content h3 {
+    color: #b2dfdb; /* Lighter color for footer headings */
+    margin-bottom: 0.8rem;
+}
+
+.footer-content p {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+}
+
+.development-info {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none; /* Hidden by default for mobile */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.open {
+        display: flex; /* Show when menu is open */
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    #menu-toggle {
+        display: block; /* Show hamburger icon on mobile */
+        align-self: flex-end; /* Position it to the right */
+        margin-top: -30px; /* Adjust as needed to align with logo */
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .development-info {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .member-list-item {
+        flex-direction: column;
+        align-items: flex-start; /* Align details to the left */
+        text-align: left;
+    }
+    .member-list-item img {
+        margin-bottom: 10px;
+        align-self: center; /* Center image when stacked */
+    }
+    .member-list-item .details {
+        display: block; /* Revert to block layout for details on small screens */
+        width: 100%;
+    }
+    .member-list-item .details p {
+        margin-bottom: 0.5rem;
+    }
+    .member-list-item .details p:nth-of-type(3) { /* Website */
+        text-align: left; /* Revert website alignment */
+    }
+}
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .view-toggle button {
+        display: block;
+        width: 90%;
+        margin: 0.5rem auto;
+    }
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Canelita Store",
+        "address": "Poza Rica, Veracruz, 93523",
+        "phone": "(782) 107-4203",
+        "website": "https://samuel-a-martinez.github.io/wdd131/project/siteplan.html",
+        "image": "canelita-logo.png",
+        "membershipLevel": 3,
+        "description": "Store dedicated to sell make up and girlies stuff",
+        "yearsInBusiness": 5
+    },
+    {
+        "name": "Bakers Delight",
+        "address": "32 Douglas Pde, Williamstown, VIC 3016",
+        "phone": "(61) 3 9397 1718",
+        "website": "https://www.bakersdelight.com.au/bakery-locator/williamstown-bakery/?gad_source=1&gad_campaignid=22693061719&gbraid=0AAAAADuSGjkfGz4GAaHyF_rJdnaINsdjN&gclid=Cj0KCQjw-ZHEBhCxARIsAGGN96I0_aQqmm-sSnRNEOAnsccBhXv-0_o_gH52VPlEEt-QDOqmFoqHQLAaAiOYEALw_wcB",
+        "image": "bakers-logo.webp",
+        "membershipLevel": 2,
+        "description": "With more than 700 bakeries located across Australia, North America and New Zealand, Bakers Delight has a strong track record of profitability and success that has stood the test of time.",
+        "specialty": "Artisan Breads"
+    },
+    {
+        "name": "Dportenis",
+        "address": "789 Park Blvd, Anytown, CA 90210",
+        "phone": "(01) 800-0028-774",
+        "website": "https://www.dportenis.mx/?gad_source=1&gad_campaignid=1631944257&gbraid=0AAAAAC52gr-sA4Cg6Gby9jxVJkXW2JTW_&gclid=Cj0KCQjw-ZHEBhCxARIsAGGN96IRmpPdhhTtKSmH1e0tqXpEGnX6KKoZaMtmaZ5AUPcbAsAib1XLacQaAvIKEALw_wcB",
+        "image": "deportenis-logo.png",
+        "membershipLevel": 3,
+        "description": "Your one-stop shop for outdoor gear and sporting equipment.",
+        "employees": 25
+    },
+    {
+        "name": "Todomoda",
+        "address": "Jesus Carranza N° 9 Col. Acapulco de Juarez Centro, Acapulco de Juárez, Guerrero",
+        "phone": "(554) 848-7039",
+        "website": "https://mx.todomoda.com/",
+        "image": "todomoda.webp",
+        "membershipLevel": 1,
+        "description": "Another store for more girlies stuff, accesible discounts",
+        "store": "Mexican"
+    },
+    {
+        "name": "Cuarentayseisydos",
+        "address": "Calle 4 408, Poza Rica de Hidalgo, Mexico",
+        "phone": "(782) 205-5480",
+        "website": "https://www.facebook.com/p/Cuarentayseisydos-100065172515367/?locale=es_LA",
+        "image": "46y2.jpg",
+        "membershipLevel": 1,
+        "description": "Your coffe shop in the city, where you can play and chill out with your friends.",
+        "nonProfit": true
+    },
+    {
+        "name": "Amore Boutique Floral",
+        "address": "Mariano Abasolo 204 Col Ricardo Flores Magón. Poza Rica, Ver.",
+        "phone": "782 169 24 06",
+        "website": "https://amoreboutiquefloral.com/",
+        "image": "amore.png",
+        "membershipLevel": 2,
+        "description": "Beautiful floral arrangements for every special moment.",
+        "deliveryAvailable": true
+    },
+    {
+        "name": "Print Flash",
+        "address": "Avenida 1 #504-A Col. Cazones, Poza Rica de Hidalgo, Veracruz.",
+        "phone": "(782) 182-1722",
+        "website": "https://printflash.com.mx/",
+        "image": "printflash.webp",
+        "membershipLevel": 3,
+        "description": "tarps, announcements, publicity and signs",
+        "established": 2005
+    }
+]

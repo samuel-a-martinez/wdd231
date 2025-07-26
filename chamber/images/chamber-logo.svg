@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<title>Chamber of Commerce Comet Logo</title>
+<desc>A simple star with a trailing comet tail, symbolizing growth and progress for a Chamber of Commerce.</desc>
+
+<path d="M100 20 L122.5 75 L180 75 L135 115 L157.5 170 L100 135 L42.5 170 L65 115 L20 75 L77.5 75 Z" fill="#FFD700"/> <path d="M100 75 Q120 65 140 70 C160 75 180 85 195 100 Q180 110 160 105 C140 100 120 90 100 75 Z" fill="url(#cometGradient)"/>
+
+<defs>
+    <linearGradient id="cometGradient" x1="100" y1="75" x2="195" y2="100" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#ADD8E6" stop-opacity="1"/> <stop offset="1" stop-color="#ADD8E6" stop-opacity="0"/> </linearGradient>
+</defs>
+</svg>

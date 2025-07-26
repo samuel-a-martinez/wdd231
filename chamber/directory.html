@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Star Chamber of Commerce ">
+    <meta property="og:description" content="This chamber of commerce will allow the user to explore a catalog of companies and the membership level">
+    <meta property="og:url" content="https://samuel-a-martinez.github.io/wdd231/directory.html">
+    <meta property="og:image" content="https://raw.githubusercontent.com/samuel-a-martinez/wdd231/refs/heads/main/images/favicon.ico" />
+    <title>Star Directory</title>
+    <link rel="icon" href="images/favicon.ico">
+    <meta name="description" content="This chamber of commerce will allow the user to explore a catalog of companies and the membership level">
+    <meta name="author" content="Samuel Martinez">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <script src="scripts/directory.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/chamber-logo.svg" alt="Chamber of Commerce Logo">
+                <h1>Star Chamber of Commerce</h1>
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+                <ul id="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h2>Chamber Member Directory</h2>
+        <div class="view-toggle">
+            <button id="grid-view" class="active" title="Grid View">
+                <span class="icon-grid">&#9638;&#9638;<br>&#9638;&#9638;</span> </button>
+            <button id="list-view" title="List View">
+                <span class="icon-list">&#9776;&#9776;</span> </button>
+        </div>
+        <div id="member-display" class="grid-view">
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Veracruz, Veracruz</p>
+                <p>Phone: (782) 187-1646</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Star Chamber of Commerce</p>
+                <p>Samuel Martinez</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
