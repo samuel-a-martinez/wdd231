@@ -312,13 +312,13 @@ footer {
 
     nav ul {
         flex-direction: column;
-        display: none; /* Hidden by default for mobile */
+        display: none; 
         width: 100%;
         text-align: center;
     }
 
     nav ul.open {
-        display: flex; /* Show when menu is open */
+        display: flex; 
     }
 
     nav ul li {
