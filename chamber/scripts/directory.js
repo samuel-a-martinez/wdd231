@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
             default: return 'Standard';
         }
     }
-
+    
     function displayMembers(viewType) {
-        memberDisplay.innerHTML = ''; // Clear current display
+        memberDisplay.innerHTML = ''; 
         memberDisplay.classList.remove('grid-view', 'list-view');
         memberDisplay.classList.add(`${viewType}-view`);
 

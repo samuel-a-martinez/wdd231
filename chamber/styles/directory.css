@@ -1,33 +1,93 @@
-/* General Body and Container Styles */
+/* =================================================== */
+/* CSS Variables (New/Improved) */
+/* =================================================== */
+:root {
+    --primary-color: #004d40; /* Dark Green */
+    --secondary-color: #00796b; /* Medium Green */
+    --accent-color: #b2dfdb; /* Light Green/Teal */
+    --light-bg-color: #e0f2f1; /* Very Light Green/Cyan */
+    --text-color: #333; /* Dark Grey for body text */
+    --light-text-color: white; /* For text on dark backgrounds */
+
+    --font-heading: 'Playfair Display', serif; /* From Google Fonts */
+    --font-body: 'Roboto', sans-serif; /* From Google Fonts */
+
+    --box-shadow-light: 0 2px 4px rgba(0,0,0,0.1);
+    --box-shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* =================================================== */
+/* General & Utility Styles */
+/* =================================================== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
     margin: 0;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4; 
+    color: var(--text-color);
+    background-color: #f4f4f4; /* Still keeping this a subtle light grey */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.header-content, .footer-content, main {
-    max-width: 1200px; 
-    margin: 0 auto;
-    padding: 1rem;
+/* Centralized max-width for main content areas */
+.header-content,
+.footer-content,
+main {
+    max-width: 1200px; /* Consistent max width for content */
+    margin: 0 auto; /* Center content */
+    padding: 1rem; /* Default padding for all main sections */
 }
 
+/* Basic Heading Styles */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* =================================================== */
 /* Header Styles */
+/* =================================================== */
 header {
-    background-color: #004d40; /* Dark green for header */
-    color: white;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem 0; /* Vertical padding, horizontal padding handled by .header-content */
+    display: flex; /* For centering .header-content */
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    padding: 1rem;
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes logo left, nav right */
     align-items: center;
     width: 100%;
 }
@@ -36,7 +96,7 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: var(--light-text-color);
 }
 
 .logo img {
@@ -47,26 +107,30 @@ header {
 .logo h1 {
     font-size: 1.8rem;
     margin: 0;
+    color: var(--light-text-color); /* Ensure h1 in logo is white */
 }
 
+/* =================================================== */
+/* Navigation Styles */
+/* =================================================== */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* For desktop navigation */
+    display: flex; /* Desktop navigation */
 }
 
 nav ul li a {
-    color: white;
+    color: var(--light-text-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #00796b; /* Lighter green on hover/active */
+    background-color: var(--secondary-color);
     border-radius: 5px;
 }
 
@@ -74,58 +138,262 @@ nav ul li a.active {
     display: none; /* Hidden by default on desktop */
     background: none;
     border: none;
-    color: white;
-    font-size: 2rem;
+    color: var(--light-text-color);
+    font-size: 2.5rem; /* Larger for touch target */
     cursor: pointer;
+    margin-left: auto; /* Pushes it to the right */
+    line-height: 1; /* Helps with alignment */
+    padding: 0.2rem 0.5rem; /* Small padding for touch area */
 }
 
-/* Main Content Styles */
+/* =================================================== */
+/* Main Content General Styles */
+/* =================================================== */
 main {
-    padding: 2rem 1rem;
-    background-color: white;
+    padding: 2rem 1rem; /* Increased vertical padding for main content */
+    background-color: var(--light-text-color); /* White background for main area */
     margin-top: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: var(--box-shadow-light);
+    display: grid; /* Use grid for overall page layout on larger screens */
+    gap: 20px; /* Gap between main sections */
+    grid-template-columns: 1fr; /* Default to single column */
 }
 
-h2 {
+/* Sections within main */
+main section {
+    padding: 1.5rem; /* Padding inside each section */
+    background-color: white; /* Sections also have white background */
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+
+/* =================================================== */
+/* Home Page Specific Styles */
+/* =================================================== */
+.hero-image {
+    grid-column: 1 / -1; /* Make hero span full width */
+    background-image: url('../images/hero-image.webp'); /* Path relative to CSS file */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    color: #004d40;
-    margin-bottom: 1.5rem;
+    color: var(--light-text-color);
+    position: relative;
+    overflow: hidden;
+    padding: 0; /* Hero image itself might not need inner padding */
+    border-radius: 8px; /* Apply border radius to the hero section */
 }
 
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for text readability */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2; /* Content above overlay */
+    padding: 1rem; /* Padding for the text within the hero */
+}
+
+.hero-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-text-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for readability */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: var(--box-shadow-medium);
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Events Section */
+.events-section {
+    /* Styles for the events container */
+}
+
+.event-card {
+    background-color: var(--light-bg-color); /* Lighter background for event cards */
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--box-shadow-light);
+}
+.event-card:last-child {
+    margin-bottom: 0; /* No margin after the last event card */
+}
+
+.event-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Weather Section */
+.weather-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+#current-weather img {
+    width: 50px; /* Adjust weather icon size */
+    height: auto;
+}
+#current-weather p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#weather-forecast h4 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+#weather-forecast p {
+    margin: 0.3rem 0;
+}
+
+
+/* Business Spotlights Section */
+.spotlights-section {
+    /* Styles for the overall spotlights container */
+}
+
+#spotlight-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid for spotlights */
+    justify-content: center; /* Center items if they don't fill the row */
+    padding: 10px; /* Slight padding inside the container */
+}
+
+.spotlight-card {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px; /* Consistent height for cards */
+}
+
+.spotlight-card img {
+    max-width: 100px;
+    height: auto;
+    margin: 0 auto 1rem auto; /* Center image */
+    border-radius: 5px;
+}
+
+.spotlight-card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.spotlight-card p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.spotlight-card a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto; /* Pushes link to the bottom of the card */
+}
+
+.spotlight-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =================================================== */
+/* Directory Page Specific Styles (Keep these, but apply variables) */
+/* =================================================== */
+/* Ensure these styles are consistent or can be generalized */
+
+/* View Toggle for Directory Page */
 .view-toggle {
     text-align: center;
     margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .view-toggle button {
-    background-color: #00796b;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 0.5rem 1rem;
     margin: 0 0.5rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    padding: 0.5rem 1rem; /* Adjust padding for icons */
-    width: 60px; /* Fixed width for icon buttons */
-    height: 60px; /* Fixed height for icon buttons */
-    display: inline-flex;
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem; /* Larger font size for icons */
-    line-height: 1;
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
 }
 
 .view-toggle button:hover {
-    background-color: #004d40;
+    background-color: var(--primary-color);
 }
 
 .view-toggle button.active {
-    background-color: #004d40;
+    background-color: var(--primary-color);
     cursor: default;
+}
+
+.view-toggle button .icon-grid,
+.view-toggle button .icon-list {
+    line-height: 1;
+    display: block;
+}
+
+.view-toggle button .icon-grid {
+    font-size: 1.8rem;
+}
+
+.view-toggle button .icon-list {
+    font-size: 2.2rem;
 }
 
 #member-display {
@@ -134,39 +402,33 @@ h2 {
     padding: 10px;
 }
 
-.view-toggle button .icon-grid {
-    line-height: 0.8; /* Adjust line height for grid squares */
-}
-.view-toggle button .icon-list {
-    font-size: 2.5rem; /* Adjust size if needed */
-}
-/* Grid View Styles */
+/* Grid View Styles (Directory) */
 #member-display.grid-view {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.member-card {
-    background-color: #e0f2f1; /* Light cyan for cards */
-    border: 1px solid #b2dfdb;
+.member-card { /* Reused for directory grid view */
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--accent-color);
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--box-shadow-light);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 250px; /* Ensures consistent card height */
+    min-height: 250px;
 }
 
 .member-card img {
     max-width: 100px;
     height: auto;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;
     border-radius: 5px;
 }
 
 .member-card h3 {
-    color: #004d40;
+    color: var(--primary-color);
     margin-top: 0;
     margin-bottom: 0.5rem;
 }
@@ -177,66 +439,73 @@ h2 {
 }
 
 .member-card a {
-    color: #00796b;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
+    margin-top: auto;
 }
 
 .member-card a:hover {
     text-decoration: underline;
 }
 
-/* List View Styles */
+/* List View Styles (Directory) */
 #member-display.list-view {
-    display: block;
-}.member-list-item {
-    background-color: #e0f2f1; /* Light background for items */
-    border: 1px solid #b2dfdb;
-    border-radius: 8px; /* Maintain rounded corners */
-    padding: 1rem 1.5rem;
-    margin-bottom: 10px; /* Space between list items */
-    display: flex; /* Use flexbox for horizontal alignment */
-    align-items: center; /* Vertically center content */
-    gap: 20px; /* Space between image and text details */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* Subtle shadow */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    display: block; /* Overrides grid display */
 }
+
+.member-list-item {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 10px;
+    display: flex; /* Use flexbox for horizontal alignment (even without image) */
+    align-items: center; /* Vertically center content */
+    gap: 20px;
+    box-shadow: var(--box-shadow-light);
+    transition: background-color 0.3s ease;
+}
+
 /* Zebra Striping */
 #member-display.list-view .member-list-item:nth-child(odd) {
-    background-color: #f8fcfc; /* Lighter background for odd rows */
+    background-color: #f8fcfc; /* Lighter background for odd rows, adjust if needed */
 }
+
 #member-display.list-view .member-list-item:hover {
     background-color: #d1e2e1; /* Slightly darker on hover */
 }
+
+/* No image in list view, so these can be removed or kept for future flexibility if images return */
+/*
 .member-list-item img {
-    max-width: 60px; /* Smaller image in list view */
+    max-width: 60px;
     height: auto;
     border-radius: 4px;
-    flex-shrink: 0; /* Prevent image from shrinking if text is long */
+    flex-shrink: 0;
 }
+*/
+
 .member-list-item .details {
-    flex-grow: 1; /* Allows details to take available space */
-    display: grid; /* Use grid for internal column alignment */
-    grid-template-columns: 1.5fr 1fr 1fr 2fr; /* Adjust column widths as needed */
-    gap: 5px 15px; /* Row and column gap */
-    align-items: center; /* Align items vertically in their grid cells */
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 2fr;
+    gap: 5px 15px;
+    align-items: center;
     font-size: 0.9rem;
 }
+
 .member-list-item h3 {
-    color: #004d40;
+    color: var(--primary-color);
     margin: 0;
     font-size: 1.2rem;
-    grid-column: 1 / span 4; /* Span full width for company name */
+    grid-column: 1 / span 4;
 }
+
 .member-list-item p {
     margin: 0.2rem 0;
 }
-.member-list-item img {
-    max-width: 80px;
-    height: auto;
-    border-radius: 4px;
-    flex-shrink: 0; /* Prevents image from shrinking */
-}
+
 .member-list-item .details p:nth-of-type(1) { /* Address */
     grid-column: 1;
 }
@@ -244,18 +513,18 @@ h2 {
     grid-column: 2;
 }
 .member-list-item .details p:nth-of-type(3) { /* Website */
-    grid-column: 3 / span 2; /* Website takes two columns */
+    grid-column: 3 / span 2;
     text-align: right;
 }
 .member-list-item .details p:nth-of-type(4) { /* Membership */
-    grid-column: 1 / span 4; /* Membership below other details */
+    grid-column: 1 / span 4;
     font-style: italic;
     color: #555;
     margin-top: 5px;
 }
 
 .member-list-item a {
-    color: #00796b;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: bold;
 }
@@ -265,11 +534,12 @@ h2 {
 }
 
 
-
+/* =================================================== */
 /* Footer Styles */
+/* =================================================== */
 footer {
-    background-color: #004d40;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
     padding: 1.5rem 0;
     margin-top: 30px;
     text-align: center;
@@ -277,15 +547,15 @@ footer {
 
 .footer-content {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
-    text-align: left;
+    text-align: left; /* Default text alignment for wider view */
     gap: 20px;
 }
 
 .footer-content h3 {
-    color: #b2dfdb; /* Lighter color for footer headings */
+    color: var(--accent-color);
     margin-bottom: 0.8rem;
 }
 
@@ -295,30 +565,48 @@ footer {
 }
 
 .development-info {
-    text-align: right;
+    text-align: right; /* Default for wider view */
 }
 
-/* Responsive Design */
+/* =================================================== */
+/* Responsive Design (Mobile First) */
+/* =================================================== */
 @media (max-width: 768px) {
+    /* Header & Navigation */
     .header-content {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* Keep row for logo and toggle */
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 1rem; /* Slightly less padding for mobile header */
+    }
+
+    .logo {
+        /* No specific width needed, flex item will adjust */
+        margin-right: auto; /* Pushes toggle to right edge */
     }
 
     nav {
-        width: 100%;
-        margin-top: 1rem;
+        width: 150px; /* Adjust dropdown width as needed */
+        margin-top: 0;
+        position: absolute;
+        top: 70px; /* Adjust based on your header's actual height */
+        right: 1rem;
+        background-color: var(--primary-color);
+        box-shadow: var(--box-shadow-medium);
+        z-index: 1000;
+        border-radius: 5px;
+        overflow: hidden;
     }
 
     nav ul {
         flex-direction: column;
-        display: none; 
+        display: none;
         width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     nav ul.open {
-        display: flex; 
+        display: flex;
     }
 
     nav ul li {
@@ -326,58 +614,133 @@ footer {
     }
 
     nav ul li a {
-        padding: 0.8rem 1rem;
+        padding: 0.8rem 1.5rem;
         border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    nav ul li:last-child a {
+        border-bottom: none;
     }
 
     #menu-toggle {
-        display: block; /* Show hamburger icon on mobile */
-        align-self: flex-end; /* Position it to the right */
-        margin-top: -30px; /* Adjust as needed to align with logo */
+        display: block;
     }
 
-    .logo {
-        width: 100%;
-        justify-content: center;
+    /* Main Content Sections on Mobile */
+    main {
+        padding: 1.5rem 0.8rem; /* Slightly reduced padding on mobile */
+        gap: 15px; /* Smaller gap between sections */
     }
 
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    main section {
+        padding: 1rem; /* Reduced padding inside sections */
+        margin-bottom: 10px; /* Ensure spacing between sections */
     }
 
-    .development-info {
-        text-align: center;
-        margin-top: 1rem;
+    /* Hero Image */
+    .hero-image {
+        height: 300px; /* Shorter hero image on mobile */
     }
+
+    .hero-content h2 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem; /* Smaller button */
+        font-size: 0.9rem;
+    }
+
+    /* Directory View Toggle */
+    .view-toggle button {
+        height: 50px; /* Smaller buttons on mobile */
+        width: 50px;
+        font-size: 1.8rem;
+    }
+    .view-toggle button .icon-grid {
+        font-size: 1.5rem;
+    }
+    .view-toggle button .icon-list {
+        font-size: 2rem;
+    }
+
+    /* Member Cards (Grid View) on Mobile */
+    #member-display.grid-view {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+    }
+    .member-card {
+        min-height: auto; /* Allow height to adjust */
+    }
+
+    /* Member List Items on Mobile */
     .member-list-item {
-        flex-direction: column;
-        align-items: flex-start; /* Align details to the left */
+        flex-direction: column; /* Stack details vertically */
+        align-items: flex-start;
         text-align: left;
-    }
-    .member-list-item img {
-        margin-bottom: 10px;
-        align-self: center; /* Center image when stacked */
+        padding: 0.8rem;
+        gap: 10px; /* Smaller gap */
     }
     .member-list-item .details {
-        display: block; /* Revert to block layout for details on small screens */
+        display: block; /* Stack details as blocks */
         width: 100%;
     }
     .member-list-item .details p {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.3rem; /* Tighter spacing */
     }
     .member-list-item .details p:nth-of-type(3) { /* Website */
         text-align: left; /* Revert website alignment */
     }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center; /* Center align all footer text */
+    }
+    .development-info {
+        text-align: center;
+        margin-top: 1rem;
+    }
 }
-@media (max-width: 480px) {
-    .logo h1 {
-        font-size: 1.5rem;
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Tablet specific adjustments if needed */
+    main {
+        padding: 2rem; /* More padding on wider screens */
+        grid-template-columns: repeat(2, 1fr); /* Two columns for main sections */
     }
 
-    .view-toggle button {
-        display: block;
-        width: 90%;
-        margin: 0.5rem auto;
+    .hero-image {
+        grid-column: 1 / -1; /* Hero still spans full width */
+    }
+
+    .spotlights-section #spotlight-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust spotlight grid */
+    }
+}
+
+@media (min-width: 1025px) {
+    /* Larger desktop specific adjustments if needed */
+    main {
+        grid-template-columns: 2fr 1fr; /* Example: Content left, weather/events right */
+        /* You can define specific grid areas here for more complex layouts */
+    }
+
+    .hero-image {
+        grid-column: 1 / -1; /* Hero always spans full width */
+    }
+
+    /* Example: Place weather and events in a side column */
+    .events-section {
+        grid-column: 2 / 3; /* Right column */
+        grid-row: 2 / 3; /* After hero, first row in right column */
+    }
+    .weather-section {
+        grid-column: 2 / 3; /* Right column */
+        grid-row: 3 / 4; /* After events */
+    }
+    .spotlights-section {
+        grid-column: 1 / -1; /* Spotlights span full width at the bottom */
+    }
+    #spotlight-container {
+        grid-template-columns: repeat(3, 1fr); /* Force 3 columns for spotlights */
     }
 }
