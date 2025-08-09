@@ -1,0 +1,201 @@
+.join-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.join-layout {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; /* Stacked on small screens */
+}
+
+/* Form Styles */
+form {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+}
+
+fieldset {
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+label input,
+label select,
+label textarea {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+input:required:invalid,
+input[pattern]:invalid {
+    border-left: 5px solid red;
+}
+
+input:required:valid,
+input[pattern]:valid {
+    border-left: 5px solid green;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Membership Cards */
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.membership-cards .card {
+    background-color: var(--light-bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--box-shadow-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial state for animation */
+    animation: fade-in-up 0.8s ease-out forwards; /* Apply animation */
+}
+/* Animation delay for each card */
+#np-card { animation-delay: 0.1s; }
+#bronze-card { animation-delay: 0.2s; }
+#silver-card { animation-delay: 0.3s; }
+#gold-card { animation-delay: 0.4s; }
+
+/* The actual animation */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.membership-cards .card h4 {
+    color: var(--primary-color);
+}
+
+.membership-cards .card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.membership-cards .card a:hover {
+    background-color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Above all other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.is-visible {
+    display: flex; /* Display with flexbox to center content */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    position: relative;
+    animation: modal-fade-in 0.3s ease;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+@keyframes modal-fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* =================================================== */
+/* Responsive Layout for Join Page */
+/* =================================================== */
+@media (min-width: 769px) {
+    .join-layout {
+        grid-template-columns: 2fr 1fr; /* Form on left, cards on right */
+    }
+}
