@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancun Cruise Trip Site Plan</title>
+    <style>
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #48cae4;
+            --accent1-color: #023e8a;
+            --accent2-color: #00b4d8;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--accent1-color);
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--accent2-color);
+            padding-bottom: 5px;
+        }
+
+        p, ul, li {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p strong {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .wireframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .wireframe-box {
+            border: 2px solid var(--primary-color);
+            padding: 10px;
+            margin: 10px;
+            flex-basis: 45%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .wireframe-box {
+                flex-basis: 100%;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cancun Cruise Trip Site Plan</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Site Name:</strong> CancunCruiseTrip.org</p>
+            <p><strong>Reasoning:</strong> This name is straightforward and clearly communicates the site's focus, which is a cruise trip in the Cancun area. The '.org' domain suffix suggests it may be a non-profit or informational site, which aligns with the project's purpose of providing trip details and resources.</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The Cancun Cruise Trip website will serve as a central hub for all participants of the trip. It will provide essential information such as trip itineraries, pricing details, and contact information for the trip's directors. Additionally, the site will feature recommendations for local tourist attractions and restaurants in the Cancun area to enhance the travel experience. A membership information form will be included for easy registration and communication.</p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li><strong>Scenario 1:</strong> How much will it cost to participate in the cruise trip, and what is included in the price?</li>
+                <li><strong>Scenario 2:</strong> Where can I find contact information for the trip's directors or other organizers?</li>
+                <li><strong>Scenario 3:</strong> What are some of the recommended tourist spots and restaurants to visit in Cancun during our free time?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Color Schema</h2>
+            <p>The color schema is inspired by the vibrant blue hues of the Caribbean Sea and the warm tones of the sun and beaches. This palette aims to evoke a feeling of relaxation and adventure.</p>
+            <ul>
+                <li><strong>Primary Color (#0077b6):</strong> Used for headers, navigation bars, and important call-to-action buttons. It represents the deep ocean and trust.</li>
+                <li><strong>Secondary Color (#48cae4):</strong> Used for accent elements, such as links, highlights, and borders. It represents the lighter, clearer waters of the coast.</li>
+                <li><strong>Accent 1 Color (#023e8a):</strong> Used for headings and subheadings. It provides a strong contrast and a sense of depth, like the open sea.</li>
+                <li><strong>Accent 2 Color (#00b4d8):</strong> Used for hover effects and decorative elements, like section separators. It’s a dynamic color that adds visual interest.</li>
+            </ul>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <div style="background-color: #0077b6; width: 50px; height: 50px; border: 1px solid #ccc;"></div>
+                <div style="background-color: #48cae4; width: 50px; height: 50px; border: 1px solid #ccc;"></div>
+                <div style="background-color: #023e8a; width: 50px; height: 50px; border: 1px solid #ccc;"></div>
+                <div style="background-color: #00b4d8; width: 50px; height: 50px; border: 1px solid #ccc;"></div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <p>The selected fonts are modern, clean, and highly readable. They are chosen to reflect a professional yet inviting tone.</p>
+            <ul>
+                <li><strong>Headings (h1, h2, h3):</strong> 'Poppins', a strong and geometric sans-serif font that makes headings stand out.</li>
+                <li><strong>Body and Paragraphs:</strong> 'Montserrat', a clean and versatile sans-serif font that is highly legible for long-form text.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wireframe</h2>
+            <p>Below are simple wireframes for the home page, showcasing the general layout for both mobile and desktop views.</p>
+            <div class="wireframe-container">
+                <div class="wireframe-box">
+                    <h3>Mobile View</h3>
+                    <p>Header (Logo & Nav Menu)</p>
+                    <hr>
+                    <p>Hero Image/Video</p>
+                    <hr>
+                    <p>Headline & Call to Action</p>
+                    <hr>
+                    <p>Section 1: Trip Overview (Text & Image)</p>
+                    <hr>
+                    <p>Section 2: Itinerary Highlights (Text & Icons)</p>
+                    <hr>
+                    <p>Section 3: Testimonials (Text Blocks)</p>
+                    <hr>
+                    <p>Footer (Links & Contact)</p>
+                </div>
+                <div class="wireframe-box">
+                    <h3>Desktop View</h3>
+                    <p>Header (Logo, Nav Bar)</p>
+                    <hr>
+                    <p>Hero Image/Video (Full Width)</p>
+                    <hr>
+                    <p>Headline & Call to Action</p>
+                    <hr>
+                    <p style="display: flex; justify-content: space-between;">
+                        <span>Section 1: Trip Overview (Image & Text)</span>
+                        <span>Section 2: Itinerary (Grid of Cards)</span>
+                    </p>
+                    <hr>
+                    <p style="display: flex; justify-content: space-between;">
+                        <span>Section 3: Testimonials (3 Columns)</span>
+                        <span>Section 4: Call to Register (Form)</span>
+                    </p>
+                    <hr>
+                    <p>Footer (Contact, Socials, Links)</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
