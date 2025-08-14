@@ -1,5 +1,3 @@
-// main.js - A single file for all shared JavaScript functionality
-
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Responsive Navigation ---

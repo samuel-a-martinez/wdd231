@@ -1,10 +1,3 @@
-// data-handler.js
-
-/**
- * Fetches and parses JSON data from a given URL.
- * @param {string} url The URL of the JSON data.
- * @returns {Promise<any>} The parsed JSON data.
- */
 export async function fetchData(url) {
     try {
         const response = await fetch(url);
