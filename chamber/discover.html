@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Star Chamber of Commerce | Discover</title>
+    <meta name="description" content="Discover local attractions, events, and businesses in our community.">
+    <meta name="author" content="Samuel Martinez">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="images/chamber-logo.svg" alt="Chamber of Commerce Logo">
+                <h1>Star Chamber of Commerce</h1>
+            </a>
+            <nav>
+                <button id="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+                <ul id="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="discover-main">
+        <h1 class="discover-h1">Discover Our Community</h1>
+
+        <aside class="sidebar-message">
+            <h3>Visitor Information</h3>
+            <p id="visit-message">Loading message...</p>
+        </aside>
+
+        <section class="discover-grid">
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Poza Rica, Veracruz, Mexico</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="development-info">
+                <p>&copy; <span id="current-year"></span> Your Chamber of Commerce</p>
+                <p>Samuel Martinez</p>
+                <p>WDD 231 Project</p>
+                <p>Last Modification: <span id="last-modified"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

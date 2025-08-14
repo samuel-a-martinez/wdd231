@@ -1,0 +1,50 @@
+[
+    {
+        "name": "'Las Américas' Park",
+        "image": "americas.webp",
+        "address": "Parque de Las Americas, Francisco I. Madero, 93260 Poza Rica de Hidalgo, Ver.",
+        "description": "The highest viewpoint in the city, where the flags of many countries rises in the park"
+    },
+    {
+        "name": "'Paseo de la Burrita'",
+        "image": "paseo-burrita.webp",
+        "address": "Boulevard A. Ruiz Cortines s/n esq. Av. 10 Oriente, Obrera, Poza Rica de Hidalgo, Ver.",
+        "description": "Local stores of the city, there's a park in the place with sculptures"
+    },
+    {
+        "name": "Teodoro Cano Museum",
+        "image": "teodoro-cano.webp",
+        "address": "Rodolfo Curti 101. Barrio del Naranjo, Centro CP 93400. Papantla de Olarte, Papantla, Veracruz",
+        "description": "Dedicated to preserve the totonaca culture and honor the artist Teodoro Cano"
+    },
+    {
+        "name": "'Gran Patio'",
+        "image": "gran-patio.webp",
+        "address": "Carr. Poza Rica - Cazones 4706, La Rueda, 93306 Poza Rica de Hidalgo, Ver.",
+        "description": "One of the biggest mall in the city, where you can find some of our members and enjoy a relaxing time"
+    },
+    {
+        "name": "'El Tajín' Arqueologic Zone",
+        "image": "tajin.webp",
+        "address": "Zona Arqueológica de El, Tajin, 93479 Papantla, Ver.",
+        "description": "El Tajín is the most important pre-Hispanic Mesoamerican city on the northern coast of Veracruz."
+    },
+    {
+        "name": "Tuxpan Beach",
+        "image": "tuxpan.webp",
+        "address": "Ruta Juárez, 92773 Ver.",
+        "description": "A popular spot for the turist with a clear view of the cristal ocean"
+    },
+    {
+        "name": "Civic Square",
+        "image": "civic.webp",
+        "address": "Calle 2 Ote s/n, Obrera, 93260 Poza Rica de Hidalgo, Ver.",
+        "description": "An important place with momuments and lots of events about the city"
+    },
+    {
+        "name": "Poza Rica Museum",
+        "image": "museum.webp",
+        "address": "Francisco I. Madero S/N, Francisco I. Madero, 93260 Poza Rica de Hidalgo, Ver.",
+        "description": "Preserving and sharing our local history through engaging exhibits and public programs."
+    }
+]
