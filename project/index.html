@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancun Cruise Trip | Home</title>
+    <meta name="description" content="Official website for the Cancun Cruise Trip. Find itineraries, pricing, and registration details for a journey through the Caribbean.">
+    <meta name="author" content="Samuel Martinez">
+    
+    <meta property="og:title" content="Cancun Cruise Trip">
+    <meta property="og:description" content="Official website for the Cancun Cruise Trip. Find itineraries, pricing, and registration details for a journey through the Caribbean.">
+    <meta property="og:image" content="https://samuel-a-martinez.github.io/wdd231/project/images/hero.webp">
+    <meta property="og:url" content="https://samuel-a-martinez.github.io/wdd231/project/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.webp" alt="Cancun Cruise Trip Logo" width="100" height="100">
+                <span>CancunCruiseTrip</span>
+            </a>
+            <nav class="main-nav">
+                <button class="hamburger" aria-label="Toggle navigation menu">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <picture>
+                <source srcset="images/hero.webp" type="image/webp">
+                <img src="images/hero.jpg" alt="A luxurious cruise ship sailing in front of Cancun's coast" loading="eager">
+            </picture>
+            <div class="hero-content">
+                <h1 class="hero-headline">Your Cancun Cruise Awaits</h1>
+                <p class="hero-cta">Explore the azure waters and vibrant culture of the Caribbean. Join us for an unforgettable journey!</p>
+                <a href="contact.html" class="cta-button">Register Now</a>
+            </div>
+        </section>
+
+        <section class="trip-overview-section">
+            <h2 class="section-heading">Your Dream Trip Itinerary</h2>
+            <div class="overview-grid">
+                </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h2 class="section-heading">What Our Guests Say</h2>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial-card">
+                    <p>"The best trip of my life! The itinerary was perfect, and the crew was amazing. Can't wait for the next one!"</p>
+                    <footer>- Jane D.</footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"From the moment we boarded, everything was seamless. The food was incredible and the views were breathtaking."</p>
+                    <footer>- Michael P.</footer>
+                </blockquote>
+                <blockquote class="testimonial-card">
+                    <p>"A perfect blend of adventure and relaxation. The trip directors were so helpful with local recommendations."</p>
+                    <footer>- Sarah L.</footer>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 CancunCruiseTrip.org</p>
+            <nav class="footer-nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Attributions</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/index.js" type="module"></script>
+</body>
+</html>

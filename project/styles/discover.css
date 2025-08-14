@@ -1,0 +1,119 @@
+/* =================================================== */
+/* Discover Page Specific Styles */
+/* =================================================== */
+.discover-main-content {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.discover-main-content h1 {
+    grid-area: h1;
+    text-align: center;
+}
+
+.sidebar-message {
+    grid-area: sidebar;
+    background-color: var(--light-bg-color, #f0f4f7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.discover-grid {
+    grid-area: content;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+.discover-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.discover-card h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.discover-card p {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+.discover-card a.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    margin-top: auto;
+}
+
+/* =================================================== */
+/* Responsive Layout with grid-template-areas */
+/* =================================================== */
+
+/* Mobile-first layout (up to 640px) */
+.discover-main-content {
+    grid-template-areas: 
+        "h1"
+        "sidebar"
+        "content";
+}
+.discover-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Medium screens (641px to 1024px) */
+@media (min-width: 641px) {
+    .discover-main-content {
+        grid-template-areas:
+            "h1 h1"
+            "sidebar content";
+        grid-template-columns: 1fr 3fr;
+    }
+    .discover-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .discover-card img {
+        height: 200px; /* Consistent image height on larger screens */
+    }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
+    .discover-main-content {
+        grid-template-areas:
+            "h1 h1"
+            "sidebar content";
+        grid-template-columns: 1fr 4fr;
+    }
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 card9"
+            "card10 card11 card12"
+            "card13 card14 card15";
+    }
+    /* Hover effect for images on medium and large screens */
+    .discover-card img:hover {
+        transform: scale(1.05);
+    }
+}

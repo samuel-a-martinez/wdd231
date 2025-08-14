@@ -1,0 +1,23 @@
+{
+  "itinerary": [
+    {
+      "day": 1,
+      "title": "Welcome Aboard & Sunset Sail",
+      "description": "Embark on the cruise ship and settle into your cabin. Enjoy a welcome dinner followed by a stunning sunset sail along the coast of Cancun.",
+      "image": "images/sections/itinerary1.webp"
+    },
+    {
+      "day": 2,
+      "title": "Isla Mujeres Exploration",
+      "description": "Spend the day on the beautiful Isla Mujeres. Enjoy snorkeling in the clear waters of Playa Norte, explore the island by golf cart, or visit the historic lighthouse.",
+      "image": "images/sections/itinerary2.webp"
+    },
+    {
+      "day": 3,
+      "title": "Cozumel Adventure",
+      "description": "Discover the incredible marine life around Cozumel, one of the world's top diving and snorkeling destinations. Participate in a guided tour or explore on your own.",
+      "image": "images/sections/itinerary3.webp"
+    }
+    
+  ]
+}

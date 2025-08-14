@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancun Cruise Trip | Contact</title>
+    <meta name="description" content="Contact the Cancun Cruise Trip organizers for pricing, registration, or general inquiries.">
+    <meta name="author" content="Samuel Martinez">
+    
+    <meta property="og:title" content="Contact Us">
+    <meta property="og:description" content="Get in touch with the Cancun Cruise Trip team for any questions about the cruise.">
+    <meta property="og:image" content="https://samuel-a-martinez.github.io/wdd231/project/images/hero.webp">
+    <meta property="og:url" content="https://samuel-a-martinez.github.io/wdd231/project/contact.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="images/logo.webp" alt="Cancun Cruise Trip Logo" width="100" height="100">
+                <span>CancunCruiseTrip.org</span>
+            </a>
+            <nav class="main-nav">
+                <button class="hamburger" aria-label="Toggle navigation menu">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <h1>Contact and Registration</h1>
+        
+        <form method="get" action="thankyou.html" id="contact-form">
+            <fieldset>
+                <legend>Your Information</legend>
+                <label for="fname">First Name* <input type="text" id="fname" name="firstName" required></label>
+                <label for="lname">Last Name* <input type="text" id="lname" name="lastName" required></label>
+                <label for="email">Email* <input type="email" id="email" name="email" required placeholder="name@domain.com"></label>
+                <label for="phone">Phone* <input type="tel" id="phone" name="phone" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Message Details</legend>
+                <label for="subject">Subject
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="registration">Registration Question</option>
+                        <option value="itinerary">Itinerary Question</option>
+                        <option value="payment">Payment/Pricing</option>
+                    </select>
+                </label>
+                <label for="message">Your Message
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </label>
+            </fieldset>
+
+            <input type="hidden" id="timestamp" name="timestamp">
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 CancunCruiseTrip.org</p>
+            <nav class="footer-nav">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="attributions.html">Attributions</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts/contact.js" type="module"></script>
+</body>
+</html>

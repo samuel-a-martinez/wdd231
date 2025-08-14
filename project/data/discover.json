@@ -1,0 +1,92 @@
+[
+    {
+        "name": "Playa Delfines",
+        "image": "images/discover/playa-delfines.webp",
+        "description": "Known for its stunning public beach and the iconic 'Cancun' sign, perfect for photos. Offers beautiful views of the Caribbean.",
+        "link": "https://www.lonelyplanet.com/mexico/cancun/zona-hotelera/attractions/playa-delfines/a/poi-sig/411558/1342478"
+    },
+    {
+        "name": "Chichen Itza",
+        "image": "images/discover/chichen-itza.webp",
+        "description": "An ancient Mayan city and a UNESCO World Heritage Site. Home to the magnificent El Castillo pyramid, a wonder of the world.",
+        "link": "https://www.chichenitza.com/"
+    },
+    {
+        "name": "Museo Maya de Cancun",
+        "image": "images/discover/museo-maya.webp",
+        "description": "A museum dedicated to Mayan culture, featuring a vast collection of artifacts and a beautifully designed exhibition space.",
+        "link": "https://sic.gob.mx/ficha.php?table=museo&table_id=1595"
+    },
+    {
+        "name": "Tulum Ruins",
+        "image": "images/discover/tulum.webp",
+        "description": "The site of a pre-Columbian Mayan walled city, located on a dramatic bluff overlooking the Caribbean Sea.",
+        "link": "https://www.inah.gob.mx/zonas/99-zona-arqueologica-de-tulum"
+    },
+    {
+        "name": "Isla Mujeres",
+        "image": "images/discover/isla-mujeres.webp",
+        "description": "A tranquil island getaway famous for its pristine beaches, golf cart rentals, and great snorkeling spots like Garrafon Natural Reef Park.",
+        "link": "https://mexicancaribbean.travel/es/destino/isla-mujeres/"
+    },
+    {
+        "name": "Xcaret Park",
+        "image": "images/discover/xcaret.webp",
+        "description": "An eco-archaeological park with underground rivers, Mayan ruins, and a variety of shows celebrating Mexican culture and nature.",
+        "link": "https://www.xcaret.com/en/"
+    },
+    {
+        "name": "Cenote Dos Ojos",
+        "image": "images/discover/cenote-dos-ojos.webp",
+        "description": "A stunning cenote system with crystal-clear fresh water caves, perfect for snorkeling and cave diving.",
+        "link": "https://cenotesworld.com/cenotes-en-Tulum-Quintana-Roo/Cenote-Dos-Ojos/"
+    },
+    {
+        "name": "La Isla Shopping Village",
+        "image": "images/discover/la-isla.webp",
+        "description": "An open-air shopping mall with a beautiful canal, offering a mix of international brands, local boutiques, and excellent dining options.",
+        "link": "https://islacancun.mx/en"
+    },
+    {
+        "name": "Avenida Tulum",
+        "image": "images/discover/avenida-tulum.webp",
+        "description": "The main artery of downtown Cancun, known for its vibrant street art, local markets, and authentic Mexican restaurants.",
+        "link": "https://www.lonelyplanet.com/mexico/cancun/cancun-centro/attractions/avenida-tulum/a/poi-sig/411548/1342477"
+    },
+    {
+        "name": "Crococun Zoo",
+        "image": "images/discover/crococun.webp",
+        "description": "An interactive zoo where you can get up close with local wildlife, including crocodiles, monkeys, and snakes in their natural habitat.",
+        "link": "https://www.crococunzoo.com/?lang=es"
+    },
+    {
+        "name": "El Rey Archaeological Zone",
+        "image": "images/discover/el-rey.webp",
+        "description": "A smaller, but charming, set of Mayan ruins located within Cancun's hotel zone. A peaceful spot to learn about history and see wild iguanas.",
+        "link": "https://www.inah.gob.mx/zonas/zona-arqueologica-el-rey"
+    },
+    {
+        "name": "Mercado 28",
+        "image": "images/discover/mercado-28.webp",
+        "description": "A bustling flea market in downtown Cancun where you can find handcrafted souvenirs, silver jewelry, and traditional clothing at great prices.",
+        "link": "https://www.mexicoescultura.com/recinto/69205/mercado-28-cancun.html"
+    },
+    {
+        "name": "Cancun Underwater Museum (MUSA)",
+        "image": "images/discover/musa.webp",
+        "description": "An incredible underwater sculpture museum. You can explore this unique art gallery by snorkeling, diving, or taking a glass-bottom boat tour.",
+        "link": "https://musamexico.org/"
+    },
+    {
+        "name": "Coco Bongo",
+        "image": "images/discover/coco-bongo.webp",
+        "description": "A world-famous nightclub known for its spectacular live shows, acrobatics, and tribute performances to iconic artists. A high-energy experience.",
+        "link": "https://www.cocobongo.com/?lang=en&currency=MXN"
+    },
+    {
+        "name": "Cancun Tower",
+        "image": "images/discover/cancun-tower.webp",
+        "description": "Get a panoramic view of Cancun from the top of this 100-meter-tall rotating scenic tower, a must-do for photographers.",
+        "link": "https://www.xailing.com/en/scenic-tower/"
+    }
+]
